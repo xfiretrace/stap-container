@@ -1,4 +1,4 @@
-# SystemTap container
+# SystemTap IN Container
 
 Systemtap running in a container.
 
@@ -27,7 +27,7 @@ Once you are in the shell, you can try some simple systemtap scripts:
 3. you can trace the process which {PID}
 
 ```
-stap -e 'probe process("/proc/12956/root/usr/local/openresty/nginx/sbin/nginx").function("ngx_http_log_request") {println("hello world")}'
+stap -e 'probe process("/proc/{PID}/root/usr/local/openresty/nginx/sbin/nginx").function("ngx_http_log_request") {println("hello world")}'
 
 ```
 
