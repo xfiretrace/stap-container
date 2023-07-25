@@ -6,6 +6,11 @@ Systemtap running in a container.
 * Extended support for container environments allows you to trace a container's pid on the host machine.
 * Adapted stapxx and openresty-systemtap-toolkit.
 
+## Install the kernel debuginfo dependency
+For different versions of ubuntu, get the corresponding kernel version at https://wiki.ubuntu.com/Debug%20Symbol%20Packages.
+
+apt-get install linux-image-$(uname -r)-dbgsym
+
 ## Usage
 
 You can use docker command to run systemtap container:
