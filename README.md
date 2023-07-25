@@ -35,7 +35,7 @@ Once you are in the shell, you can try some simple systemtap scripts:
   read performed
   ```
 
-3. you can trace the process which {PID}
+3. you can trace the process which {PID} such as:
 
 ```
 stap -e 'probe process("/proc/{PID}/root/usr/local/openresty/nginx/sbin/nginx").function("ngx_http_log_request") {println("hello world")}'
