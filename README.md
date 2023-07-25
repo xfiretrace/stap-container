@@ -9,7 +9,9 @@ Systemtap running in a container.
 ## Install the kernel debuginfo dependency
 For different versions of ubuntu, get the corresponding kernel version at https://wiki.ubuntu.com/Debug%20Symbol%20Packages.
 
+```shell
 apt-get install linux-image-$(uname -r)-dbgsym
+```
 
 ## Usage
 
