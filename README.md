@@ -2,6 +2,10 @@
 
 Systemtap running in a container.
 
+## Feature
+* Extended support for container environments allows you to trace a container's pid on the host machine.
+* Adapted stapxx and openresty-systemtap-toolkit.
+
 ## Usage
 
 You can use docker command to run systemtap container:
