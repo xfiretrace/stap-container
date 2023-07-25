@@ -18,7 +18,7 @@ apt-get install linux-image-$(uname -r)-dbgsym
 You can use docker command to run systemtap container:
 
 ```shell
-docker run  --privileged --rm  -v /sys/kernel/debug:/sys/kernel/debug -v /usr/src/:/usr/src/ -v   /lib/modules/:/lib/modules/ -v /usr/lib/debug:/usr/lib/debug -v /proc:/proc  -t -i --name  systemtap xfiretrace/systemtap:v0.0.1
+docker run  --privileged --rm  -v /sys/kernel/debug:/sys/kernel/debug -v /usr/src/:/usr/src/ -v   /lib/modules/:/lib/modules/ -v /usr/lib/debug:/usr/lib/debug -v /proc:/proc  -t -i --name  systemtap xfiretrace/systemtap
 ```
 
 Once you are in the shell, you can try some simple systemtap scripts:
