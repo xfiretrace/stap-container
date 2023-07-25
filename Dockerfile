@@ -14,6 +14,5 @@ RUN sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list && apt update
 RUN apt-get install git  -y
 RUN apt-get build-dep systemtap -y
 RUN git clone https://github.com/xfiretrace/systemtap.git
-RUN cd systemtap && CXXFLAGS="-g"   ./configure --prefix=/usr &&  make && make install
-##RUN cd systemtap && cp ./stap  ./stap-profile-annotate  ./stap-report ./stap-server ./stapbpf/stapbpf ./staprun  /usr/bin
+RUN cd systemtap && ./configure --prefix=/usr &&  make && make install
 CMD ["/bin/bash"]
