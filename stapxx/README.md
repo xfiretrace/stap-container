@@ -4,7 +4,7 @@ Stpaxx running in a container.
 
 ## Feature
 * Extended support for container environments allows you to trace a container's pid on the host machine.
-* Adapted stapxx and openresty-systemtap-toolkit.
+* Adapted stapxx with `openresty/1.19.3.2`.
 
 ## Usage
 
