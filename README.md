@@ -11,6 +11,22 @@ https://github.com/xfiretrace/systemtap
 For different versions of ubuntu, get the corresponding kernel version at https://wiki.ubuntu.com/Debug%20Symbol%20Packages.
 
 ```shell
+echo "deb http://ddebs.ubuntu.com $(lsb_release -cs) main restricted universe multiverse
+deb http://ddebs.ubuntu.com $(lsb_release -cs)-updates main restricted universe multiverse
+deb http://ddebs.ubuntu.com $(lsb_release -cs)-proposed main restricted universe multiverse" | \
+sudo tee -a /etc/apt/sources.list.d/ddebs.list
+
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F2EDC64DC5AEE1F6B9C621F0C8CAB6595FDFF622
+```
+
+Then run the following to update your package list or click the Reload button if you used the Synaptic Package Manager.
+
+```
+sudo apt-get update
+```
+
+
+```shell
 apt-get install linux-image-$(uname -r)-dbgsym
 ```
 
